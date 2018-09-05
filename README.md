@@ -48,6 +48,6 @@ function convert_workshop_date( $post ) {
 }
 ```
 
-# Screenshoot
+# Screenshot
 ![WP Bulk Process](https://media.giphy.com/media/QNW306u1gltHbXZwpT/giphy.gif "WP Bulk Process")
 
