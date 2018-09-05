@@ -3,7 +3,7 @@
  * WPBP_Admin Class.
  *
  * @class       WPBP_Admin
- * @version		1.0
+ * @version		1.0.0
  * @author lafif <hello@lafif.me>
  */
 
@@ -103,7 +103,11 @@ class WPBP_Admin {
 				        		<label class="option-label" for="process_<?php echo $process_id; ?>"><?php echo $data['name']; ?></label>
 								</p>
 								<?php 
-								} 
+								}
+								else:
+								?>
+								<p><?php echo __('No bulk process registered, please see the example.php file.', 'textdomain'); ?></p>
+								<?php 
 								endif;
 								?>
 								<hr class="wpbp-hr">

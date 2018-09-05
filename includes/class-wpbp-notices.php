@@ -3,7 +3,7 @@
  * WPBP_Notices Class.
  *
  * @class       WPBP_Notices
- * @version		1.0
+ * @version		1.0.0
  * @author lafif <hello@lafif.me>
  */
 
@@ -19,7 +19,7 @@ class WPBP_Notices {
 	/**
 	 * Stores the list of errors.
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @var array
 	 */
 	private $errors = array();
@@ -27,7 +27,7 @@ class WPBP_Notices {
 	/**
 	 * Stores the list of notices.
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @var array
 	 */
 	private $notices = array();
@@ -35,7 +35,7 @@ class WPBP_Notices {
 	/**
 	 * Stores the list of success.
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @var array
 	 */
 	private $success = array();

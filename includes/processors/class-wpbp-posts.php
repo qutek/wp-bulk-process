@@ -3,7 +3,7 @@
  * WPBP_Posts Class.
  *
  * @class       WPBP_Posts
- * @version		1.0
+ * @version		1.0.0
  * @author lafif <hello@lafif.me>
  */
 

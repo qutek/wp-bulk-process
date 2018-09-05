@@ -18,6 +18,7 @@
 			$(document).on('click', '.start-bulk-process', self.prepare );
 			$(document).on('click', '.stop-bulk-process', self.stopProcess );
 			$(document).on('click', '#window', self.toggleConsole );
+			$(document).on('change', 'input[name="process"]', self.resetAjaxData );
 		};
 
 		self.initElements = function(){
@@ -26,6 +27,11 @@
 			self.start_button = self.container.find('.start-bulk-process');
 			self.stop_button = self.container.find('.stop-bulk-process');
 			self.progressBar = self.container.find('.wpbp_progress');
+		};
+
+		self.resetAjaxData = function(e){
+			self.ajax_data.step = 1;
+			self.ajax_data.status = 'started';
 		};
 
 		self.toggleConsole = function(e){
