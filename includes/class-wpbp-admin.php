@@ -53,8 +53,8 @@ class WPBP_Admin {
 		wp_localize_script( 'wpbp', 'WPBP', array(
 			'ajax_url' => WPBP()->ajax_url(),
 			'nonce' => wp_create_nonce( 'wpbp-ajax' ),
-			'start_process_text' => __('Start processing..', 'wpbp'),
-			'stop_process_text' => __('Stop processing..', 'wpbp'),
+			'start_process_text' => __('Start processing', 'wpbp'),
+			'stop_process_text' => __('Stoping process..', 'wpbp'),
 		) );
 	}
 

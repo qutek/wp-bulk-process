@@ -79,17 +79,11 @@
 
 					self.updateConsole(response.messages);
 
-					if( ['stopped', 'noresult', 'finished'].indexOf(response.status) > 0 ){
-						self.start_button.removeClass('disabled');
-						self.stop_button.addClass('hide');
-						return;
-					}
-
 					if(typeof(response.status) != 'undefined'){
 						self.ajax_data.status = response.status.toLowerCase();
 					}
 
-					if( ['running', 'finished'].indexOf(response.status) > 0 ){
+					if( ['running', 'finished'].indexOf(response.status) >= 0 ){
 						self.progressBar.asPieProgress('go', response.progress + '%');
 					}
 					
@@ -99,8 +93,12 @@
 							self.bulkProcess();
 						}
 					} else {
-						
 						alert(response.errors.join(','));
+					}
+
+					if( ['stopped', 'noresult', 'finished'].indexOf(response.status) >= 0 ){
+						self.start_button.removeClass('disabled');
+						self.stop_button.addClass('hide');
 					}
               	}
 			} );
