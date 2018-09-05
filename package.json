@@ -1,0 +1,37 @@
+{
+  "name": "wp-bulk-process",
+  "version": "1.0.0",
+  "description": "MauBelajarApa main plugin",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1",
+    "npm": "^6.0.1",
+    "to": "^0.2.9",
+    "update": "^0.7.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {},
+  "author": {
+    "name": "Lafif Astahdziq",
+    "email": "hello@lafif.me",
+    "url": "https://lafif.me/"
+  },
+  "license": "ISC",
+  "homepage": "https://lafif.me"
+}

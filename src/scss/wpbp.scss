@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+@import 'layouts/index';
+@import 'form-fields/index';
+@import 'extensions/index';
+@import 'terminal';
+
+.pie_progress {
+	min-height: 80px;
+  	width: 160px;
+  	margin: 10px auto;
+}
+@media all and (max-width: 768px) {
+  .pie_progress {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+#window {
+	cursor: pointer;
+}
+.hide {
+	display:none;
+}
+.btn-green:focus {
+	color: white;
+  	text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+  	background: #4ebd4a;
+  	outline: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.hideSearch .select2-search,
+.hideSearch .select2-results,
+.hideSearch .select2-dropdown {
+    display: none;
+}
+
+#s2id_select-product.select2-container-multi .select2-choices {
+	// display: inline-block;
+ //    vertical-align: top;
+ //    padding: 0 8px;
+ //    height: 33px;
+ //    line-height: 19px;
+ //    color: #626262;
+ //    background: white;
+    border: 2px solid #d9d9d9;
+ //    border-radius: 2px;
+}
+.select-brand-drop .select2-search {
+	display:none;
+}
+
+#s2id_select-product.select2-container-multi.select2-container-active .select2-choices {
+	border: 2px solid #d9d9d9;
+}
+
+#s2id_select-product.select2-container-multi .select2-choices .select2-search-field input.select2-active {
+	background:none!important;
+}
+
+.wpbp-holder {
+
+	p.alert {
+		margin-left:0;
+		margin-right:0;
+
+		a {
+			text-decoration:none;
+		}
+	}
+
+	.wpbp-content {
+		table {
+			border-collapse:separate;
+	  		border-spacing:10px 10px;
+
+		    td {
+		    	// padding: 5px 0;
+		    	font-size: 14px;
+		    }
+		}
+	    .option {
+	    	width: 24px;
+	    	height: 24px;
+	    }
+	    .radio {
+		    border-radius: 100%;
+		    &:before {
+		    	margin: 4px;
+			    width: 12px;
+			    height: 12px;
+			    border-radius: 100%;
+		    }
+		}
+		.option-label {
+			line-height: 26px;
+		}
+		input[type=text], input[type=number], input[type=email], input[type=url], input[type=search] {
+			width:100%;
+		}
+		textarea {
+			width:100%;
+		}
+		.markup_type {
+			// margin-left:10px;
+			input {
+				width:100px;
+			}
+		}
+	}
+}
+
+.bi_welcome_message {
+	h2 {
+		text-align:center;
+		font-size: 20px;
+	}
+	p {
+		font-size: 15px;
+	}
+}
+.bi_settings {
+	float:right;
+	text-decoration: none;
+	background: #19a7ef;
+    padding: 2px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #fff;
+    &:hover, &:active {
+    	color:#fff;
+    }
+    .dashicons {
+    	font-size: 18px;
+    line-height: 18px;
+    }
+}
