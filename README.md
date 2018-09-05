@@ -1,8 +1,14 @@
-<?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+# WP Bulk Process
 
+Simple plugin to deal with bulk processing large dataset by splitting and process with ajax to avoid timeout.
+
+# Installation!
+
+  - Download or clone this repository into wp-content/plugins
+  - Activate plugin
+  - Register your bulk process by adding script into `mu-plugins` or theme `functions.php`
+  - Sample process script ([example](example.php))
+``` php
 add_filter( 'wpbp_get_registered_process', 'sample_wpbp_process', 10, 1 );
 function sample_wpbp_process( $process ){
 
@@ -40,3 +46,8 @@ function convert_workshop_date( $post ) {
 	update_post_meta( $post->ID, 'test_bulk_process', current_time( 'mysql' ) );
 	wpbp_add_success_message( sprintf( __('Added new post meta `test_bulk_process` for post %s (%d)', 'wpbp'), $post->post_title, $post->ID ) );
 }
+```
+
+# Screenshoot
+![WP Bulk Process](https://media.giphy.com/media/QNW306u1gltHbXZwpT/giphy.gif "WP Bulk Process")
+
