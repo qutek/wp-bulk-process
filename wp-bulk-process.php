@@ -5,7 +5,7 @@
  * Author: Lafif Astahdziq
  * Author URI: https://lafif.me
  * Author Email: hello@lafif.me
- * Version: 1.0.0.0
+ * Version: 1.0.0
  * Text Domain: wpbp
  * Domain Path: /languages/ 
  */
