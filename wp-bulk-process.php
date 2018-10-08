@@ -5,7 +5,7 @@
  * Author: Lafif Astahdziq
  * Author URI: https://lafif.me
  * Author Email: hello@lafif.me
- * Version: 1.0.0.0
+ * Version: 1.0.1
  * Text Domain: wpbp
  * Domain Path: /languages/ 
  */
@@ -27,7 +27,7 @@ final class WPBulkProcess {
 	/**
 	 * @var string
 	 */
-	public $version = '1.0.0';
+	public $version = '1.0.1';
 
 	public $capability = 'manage_options';
 
