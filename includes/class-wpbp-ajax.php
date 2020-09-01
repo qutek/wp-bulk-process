@@ -54,8 +54,8 @@ class WPBP_Ajax {
         }
 
         $args = $registered_process[$process_id];
-        
-        // load processor 
+
+        // load processor
         wpbp_load_processor($process_id, $args);
 
         $step = absint( $_POST['step'] );
@@ -93,6 +93,17 @@ class WPBP_Ajax {
             $process_id = esc_attr( $_POST['process_id'] );
         }
 
+        $registered_process = wpbp_get_registered_process();
+        $process_id = (isset($_POST['process_id'])) ? esc_attr( $_POST['process_id'] ) : 0;
+        if ( empty( $process_id ) || !isset($registered_process[$process_id]) ) {
+            wpbp_add_error_message( __( 'Process id not found.', 'wpbp' ) );
+        }
+
+        $args = $registered_process[$process_id];
+
+        // load processor
+        wpbp_load_processor($process_id, $args);
+
         if ( ! empty( $errors ) ) {
             wp_send_json( array(
                 'success' => false,
@@ -106,14 +117,14 @@ class WPBP_Ajax {
          * In case there is no hook attached to `wpbp_reset_{process_id}`
          */
         wpbp_add_error_message( __( 'Callback not found.', 'wpbp' ) );
-        wp_send_json( array( 
+        wp_send_json( array(
             'success' => false,
             'messages' => wpbp_get_messages(),
         ) );
     }
 
 	public function includes(){
-	
+
 	}
 
 }

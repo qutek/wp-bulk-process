@@ -75,7 +75,7 @@ class WPBP_Admin {
 			  	<div class="wpbp-left">
 			     	<div class="wpbp-holder">
 				        <h1>
-				        	<span class="dashicons dashicons-forms"></span> 
+				        	<span class="dashicons dashicons-forms"></span>
 				        	<?php _e('Bulk Update', 'wpbp'); ?>
 				        </h1>
 				        <div class="wpbp-clear"></div>
@@ -85,13 +85,13 @@ class WPBP_Admin {
 					    </noscript>
 				        <div class="wpbp-content">
 							<form>
-								<?php  
+								<?php
 								$registered_process = wpbp_get_all_processor();
 
 								// echo "<pre>";
 								// print_r($registered_process);
 								// echo "</pre>";
-								
+
 								if(!empty($registered_process)):
 								foreach ($registered_process as $process_id => $data) {
 								?>
@@ -102,16 +102,17 @@ class WPBP_Admin {
 				        		</label>
 				        		<label class="option-label" for="process_<?php echo $process_id; ?>"><?php echo $data['name']; ?></label>
 								</p>
-								<?php 
+								<?php
 								}
 								else:
 								?>
 								<p><?php echo __('No bulk process registered, please see the example.php file.', 'textdomain'); ?></p>
-								<?php 
+								<?php
 								endif;
 								?>
 								<hr class="wpbp-hr">
 								<a href="#" class="start-bulk-process btn btn-green"><?php _e('Process', 'wpbp'); ?></a>
+								<a href="#" class="reset-bulk-process btn btn-red"><?php _e('Reset', 'wpbp'); ?></a>
 								<a href="#" class="stop-bulk-process btn btn-default hide" style="float:right;"><?php _e('Stop', 'wpbp'); ?></a>
 							</form>
 				        </div>
@@ -155,7 +156,7 @@ class WPBP_Admin {
 	}
 
 	public function includes(){
-	
+
 	}
 
 }

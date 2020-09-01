@@ -2,7 +2,7 @@
 
 	Bulk_Process = function() {
 		var self = this;
-		
+
 		self.ajax_data = {
 			action: 'run_bulk_process',
 			nonce: WPBP.nonce,
@@ -15,10 +15,25 @@
 
 			self.initElements();
 
+			$(document).on('click', '.reset-bulk-process', self.reset );
 			$(document).on('click', '.start-bulk-process', self.prepare );
 			$(document).on('click', '.stop-bulk-process', self.stopProcess );
 			$(document).on('click', '#window', self.toggleConsole );
 			$(document).on('change', 'input[name="process"]', self.resetAjaxData );
+		};
+
+		self.reset = function(e) {
+			e.preventDefault();
+
+			var r = confirm("Are you sure to reset ?");
+
+			if (r == true) {
+				var process = $('input[name="process"]:checked').val();
+				self.ajax_data.action = 'reset_bulk_process';
+				self.ajax_data.process_id = process;
+				self.progressBar.asPieProgress('reset');
+				self.bulkProcess();
+			}
 		};
 
 		self.initElements = function(){
@@ -45,20 +60,21 @@
 			self.ajax_data.status = 'stopped';
 			$(this).text(WPBP.stop_process_text);
 		};
-		
+
 		self.prepare = function(e) {
 			e.preventDefault();
-			
+
 			var r = confirm("Are you sure to process ?");
 
 			if (r == true) {
 				var process = $('input[name="process"]:checked').val();
+				self.ajax_data.action = 'run_bulk_process';
 				self.ajax_data.process_id = process;
 				self.ajax_data.step = 1;
 				self.progressBar.asPieProgress('reset');
 			    self.bulkProcess();
 			}
-			
+
 		};
 
 		self.bulkProcess = function(e){
@@ -75,7 +91,7 @@
 				type: 'post',
 				url: WPBP.ajax_url,
 				success: function(response) {
-					console.log(response);
+					// console.log(response);
 
 					self.updateConsole(response.messages);
 
@@ -86,7 +102,7 @@
 					if( ['running', 'finished'].indexOf(response.status) >= 0 ){
 						self.progressBar.asPieProgress('go', response.progress + '%');
 					}
-					
+
 					if( response.success ){
 						if( 'running' === self.ajax_data.status ){
 							self.ajax_data.step = parseInt(self.ajax_data.step)+1;
@@ -111,7 +127,7 @@
 			 * @return {[type]}                           [description]
 			 */
 			if ( (typeof(messages.success) != 'undefined') && messages.success.length ) {
-				for (i = 0; i < messages.success.length; i++) { 
+				for (i = 0; i < messages.success.length; i++) {
 				    self.cmd.append('<span class="result success">'+messages.success[i]+'</span>');
 				}
 			}
@@ -122,7 +138,7 @@
 			 * @return {[type]}                           [description]
 			 */
 			if ( (typeof(messages.notices) != 'undefined') && messages.notices.length ) {
-				for (i = 0; i < messages.notices.length; i++) { 
+				for (i = 0; i < messages.notices.length; i++) {
 				    self.cmd.append('<span class="result">'+messages.notices[i]+'</span>');
 				}
 			}
@@ -133,7 +149,7 @@
 			 * @return {[type]}                           [description]
 			 */
 			if ( (typeof(messages.errors) != 'undefined') && messages.errors.length ) {
-				for (i = 0; i < messages.errors.length; i++) { 
+				for (i = 0; i < messages.errors.length; i++) {
 				    self.cmd.append('<span class="result failed">'+messages.errors[i]+'</span>');
 				}
 			}
@@ -150,7 +166,7 @@
 
 			if ( success ) {
 				self.items_successes = self.items_successes + 1;
-				
+
 				// write to log
 				// console.log(response.notices);
 				$('#cmd_text').append('<span class="result success">'+response.message+'</span>');
@@ -158,7 +174,7 @@
 				var notices = response.notices;
 				if ( (typeof(notices) != 'undefined') && notices.length ) {
 					var details = '<span class="result detail">';
-					for (i = 0; i < notices.length; i++) { 
+					for (i = 0; i < notices.length; i++) {
 					    details += '<span class="content-detail">'+notices[i]+'</span>';
 					}
 					details += '</span>';
@@ -177,7 +193,7 @@
 				var notices = response.notices;
 				if ( (typeof(notices) != 'undefined') && notices.length ) {
 					var details = '<span class="result detail">';
-					for (i = 0; i < notices.length; i++) { 
+					for (i = 0; i < notices.length; i++) {
 					    details += '<span class="content-detail">'+notices[i]+'</span>';
 					}
 					details += '</span>';
@@ -186,7 +202,7 @@
 				}
 			}
 		};
-		
+
 		return self;
 	}
 

@@ -5,9 +5,9 @@
  * Author: Lafif Astahdziq
  * Author URI: https://lafif.me
  * Author Email: hello@lafif.me
- * Version: 1.0.1
+ * Version: 1.1.0
  * Text Domain: wpbp
- * Domain Path: /languages/ 
+ * Domain Path: /languages/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -86,7 +86,7 @@ final class WPBulkProcess {
 	 * @return [type] [description]
 	 */
 	public function install() {
-		
+
 		// we did something on install
 		do_action( 'on_wpbp_install' );
 	}
@@ -97,7 +97,7 @@ final class WPBulkProcess {
 	 */
 	public function uninstall() {
 
-		// we remove what we did 
+		// we remove what we did
 		do_action( 'on_wpbp_uninstall' );
 	}
 
@@ -119,7 +119,7 @@ final class WPBulkProcess {
 		wp_register_style( 'wpbp', plugins_url( '/assets/css/wpbp.css', __FILE__ ) );
 		wp_register_script( 'asPieProgress', plugins_url( '/assets/js/jquery-asPieProgress.js', __FILE__ ), array('jquery'), '', true );
 		wp_register_script( 'wpbp', plugins_url( '/assets/js/wpbp.js', __FILE__ ), array('jquery', 'asPieProgress'), '', true );
- 	
+
 		do_action( 'wpbp_register_script' );
  	}
 
