@@ -478,5 +478,9 @@ abstract class Bulk_Process {
 
 		$this->batch_clear_result_status();
 		$this->update_status( 'reset' );
+
+		wpbp_add_success_message( sprintf(__('Successfully reset process %s', 'wpbp'), $this->process_id) );
+
+		wp_send_json($this->format_ajax_details());
 	}
 }
