@@ -1,0 +1,252 @@
+repo_name: qutek/wp-bulk-process
+report_id: 76e8e249878fdf04b96afb289a3e2811
+repo_type: Public
+timestamp: '2023-11-14T15:35:40+00:00'
+requested_by: qutek
+provider: github
+branch: master
+detected_tools_count: 17
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: Repo Metadata
+- name: PHP
+  description: A popular general-purpose scripting language that is especially suited
+    to web development
+  website_url: http://www.php.net/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: gulp
+  description: The streaming build system
+  website_url: http://gulpjs.com/
+  version: 3.9.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/844/iruTC031.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: Modernizr
+  description: Respond to your user’s browser features
+  website_url: https://modernizr.com/
+  version: 3.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/service/2440/9TeXWBzR_400x400.jpg
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: browser-sync
+  description: Live CSS Reload &amp; Browser Syncing
+  package_url: https://www.npmjs.com/browser-sync
+  version: 2.24.7
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16034/default_a9b6ac3c2fe43713f9a8e43d4668d0352ad0d247.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: gulp-clean-css
+  description: Minify css with clean-css
+  package_url: https://www.npmjs.com/gulp-clean-css
+  version: 3.10.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16301/default_3b7197abc4df3d7fa7c5292f17b2e6fb0cd1c8d4.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: gulp-concat
+  description: Concatenates files
+  package_url: https://www.npmjs.com/gulp-concat
+  version: 2.6.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15973/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: gulp-notify
+  description: Gulp plugin to send messages based on Vinyl Files or Errors to Mac
+    OS X, Linux or Windows using the node-notifier module
+  package_url: https://www.npmjs.com/gulp-notify
+  version: 3.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16337/default_19913b5a2ce8aaeed5a69f95974f9afd07e8e8bc.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: gulp-plumber
+  description: Prevent pipe breaking caused by errors from gulp plugins
+  package_url: https://www.npmjs.com/gulp-plumber
+  version: 1.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16033/default_72d4237e6719b7d75d0307bf8b5718584fdc3425.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: gulp-rename
+  description: Rename files
+  package_url: https://www.npmjs.com/gulp-rename
+  version: 1.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15895/default_e4668902f8489350db9b0fb228523a571ef05b26.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: gulp-sass
+  description: Gulp plugin for sass
+  package_url: https://www.npmjs.com/gulp-sass
+  version: 4.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16002/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: gulp-sourcemaps
+  description: Source map support for Gulp.js
+  package_url: https://www.npmjs.com/gulp-sourcemaps
+  version: 1.6.0
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15958/default_4040fefea2f98006727f63d042275b96a275ab2d.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: gulp-uglify
+  description: Minify files with UglifyJS
+  package_url: https://www.npmjs.com/gulp-uglify
+  version: 3.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15910/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+- name: npm
+  description: A package manager for JavaScript
+  package_url: https://www.npmjs.com/npm
+  version: 6.4.1
+  license: Artistic-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16105/default_5a461d436012a0c4024534aaba303dcdb0297d24.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Lafif Astahdziq
+  last_updated_on: 2018-09-05 19:40:56.000000000 Z
+  vulnerabilities:
+  - name: npm Vulnerable to Global node_modules Binary Overwrite
+    cve_id: CVE-2019-16777
+    cve_url: https://github.com/advisories/GHSA-4328-8hgf-7wjr
+    detected_date: Aug 22
+    severity: high
+    first_patched: 6.13.4
+  - name: Arbitrary File Write in npm
+    cve_id: CVE-2019-16775
+    cve_url: https://github.com/advisories/GHSA-m6cx-g6qm-p2cx
+    detected_date: Aug 22
+    severity: high
+    first_patched: 6.13.3
+  - name: npm symlink reference outside of node_modules
+    cve_id: CVE-2019-16776
+    cve_url: https://github.com/advisories/GHSA-x8qc-rrcw-4r46
+    detected_date: Aug 22
+    severity: high
+    first_patched: 6.13.3
+  - name: npm CLI exposing sensitive information through logs
+    cve_id: CVE-2020-15095
+    cve_url: https://github.com/advisories/GHSA-93f3-23rq-pjfp
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 6.14.6
